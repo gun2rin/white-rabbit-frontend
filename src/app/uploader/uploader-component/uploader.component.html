@@ -1,0 +1,35 @@
+<div class="row">
+
+    <div class="col-md-6 p-5">
+
+
+
+        <app-color #color></app-color>
+
+        <br/><br/>
+
+        <h5 class="uploader press">Select picture (10Mb max) to transform into Ascii Art</h5>
+
+        <label class="fileContainer btn btn-danger">
+
+        take the red pill!
+
+        <input type="file" ng2FileSelect [uploader]="uploader"
+               (onFileSelected)="upload(color.options, captchaRef)"/>
+        </label>
+        <span class="badge">{{ filename$ | async }}</span>
+
+
+    </div>
+</div>
+
+
+<app-messages></app-messages>
+<app-transformed-image></app-transformed-image>
+<re-captcha size="invisible"
+            #captchaRef="reCaptcha"
+            [siteKey]="siteKey"
+>
+</re-captcha>
+
+

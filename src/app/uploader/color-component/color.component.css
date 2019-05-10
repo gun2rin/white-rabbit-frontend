@@ -1,0 +1,19 @@
+.colorpicker {
+
+    cursor: pointer;
+    cursor: hand;
+    border: 1px solid #8f8f8f;
+    width: 30px;
+    height:  30px;
+    border-radius: 100%;
+
+}
+
+.background
+{
+
+    margin-left: 6px;
+
+}
+
+.press {font-family: 'Press Start 2P'}

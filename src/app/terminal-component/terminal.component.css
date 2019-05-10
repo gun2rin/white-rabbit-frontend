@@ -1,0 +1,30 @@
+.console {
+    font-family: 'Press Start 2P';
+    background: #0d0d0d;
+    color: #20e00b;
+    display: block;
+    width: auto;
+    margin-left: 8px;
+}
+
+.blinker {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-duration: 1s;
+    width: 2px;
+    height: 10px;
+    margin-left: 1px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(white, .3);
+    background: #20e00b;
+}
+
+@keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}

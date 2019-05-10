@@ -1,0 +1,9 @@
+<div class="row" *ngIf="messages$ | async">
+  <div class="col-md-12 p-5 col-xs-12">
+          <span *ngFor="let message of messages$ | async"
+                [ngClass]="{
+                                    ' alert-danger' :  (error$ | async),
+                                    ' heading': !(error$ | async)
+                              }" class="alert">{{ message }}</span>
+  </div>
+</div>
