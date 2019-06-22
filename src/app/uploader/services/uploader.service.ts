@@ -24,7 +24,7 @@ import {Colors} from '../colors';
   providedIn: 'root'
 })
 
-export class UploaderService extends Uploader<FileUploader> implements OnDestroy {
+export class UploaderService implements Uploader<FileUploader>, OnDestroy {
 
   private uploader: FileUploader;
   private subscription: Subscription;
@@ -35,7 +35,6 @@ export class UploaderService extends Uploader<FileUploader> implements OnDestroy
 
 
   constructor(public state: StateService) {
-    super();
     this.init();
     this.subscription = this.subscribeResponse();
   }

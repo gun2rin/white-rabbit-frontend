@@ -35,7 +35,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
     exports: [UploaderComponent, TransformedImageComponent, MessagesComponent, ColorComponent],
     declarations: [UploaderComponent, TransformedImageComponent, MessagesComponent, ColorComponent],
     providers: [
-        {provide: Uploader, useClass: UploaderService}
+        {provide: Uploader, useExisting: UploaderService}
     ]
 
 })
